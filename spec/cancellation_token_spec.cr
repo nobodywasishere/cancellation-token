@@ -1,8 +1,8 @@
 require "./spec_helper"
 
-describe CancellationToken do
+describe Cancel::Token do
   it "works" do
-    token_source = CancellationTokenSource.new
+    token_source = Cancel::TokenSource.new
     token = token_source.token
 
     token.cancelled?.should be_false
@@ -11,7 +11,7 @@ describe CancellationToken do
   end
 
   it "works pt. 2" do
-    token_source = CancellationTokenSource.new
+    token_source = Cancel::TokenSource.new
     token = token_source.token
     counter = 0
 
@@ -30,7 +30,7 @@ describe CancellationToken do
   end
 
   it "works pt. 3" do
-    token_source = CancellationTokenSource.new
+    token_source = Cancel::TokenSource.new
     token = token_source.token
     counter = 0
 
